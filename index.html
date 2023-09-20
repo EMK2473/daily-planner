@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Daily Planner</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+        <section>
+        <h1>Daily Planner</h1>
+        <p>Today's Date: 
+            <p id="today"></p>   
+        </p> 
+    </section>
+    </header>
+    <section id="planList">
+        <section id="hourBlock">
+
+        </section>
+        <section id="planEntry">
+            <form id="planForm" method="POST">
+                <label for="plans-Text">Plans:</label>
+                <input type="text" name="initals" id="planText" />
+              </form>
+        </section>
+        <section id="save-plans">
+
+        </section>
+        
+    </section>
+    <script src="path/to/dayjs/dayjs.min.js"></script>
+    <script>
+      dayjs().format()
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
