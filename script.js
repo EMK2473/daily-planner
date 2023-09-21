@@ -4,6 +4,16 @@ let currentHour = dayjs().hour(); // gets current hour value 0-23
 console.log(currentHour);
 console.log(today);
 
+let style = [
+  future = "blue",
+  present = "green",
+  past = "red",
+]
+
+function sunDial(){
+
+}
+
 // daily 9-5 planner
 // it's a sundial
 
@@ -24,14 +34,81 @@ console.log(today);
 // create an array of 8 [0-7] called hourCheck;
 
 // if currentHour >= 9 and <= 16; continue;
-//      else (currentHour > 9) style blue;
-//        else  (currentHour > 16); style red; clear storage;
+//      else if (currentHour > 9) style blue;
+//        else (currentHour > 16); style red; clear storage;   nested if statement
+
+
+// if this then
+//      do something
+// else
+//      do something else
+// end if;
+
+// if this then
+//      do something
+// else
+//      if this then
+//          do something
+//      else
+//          do something else
+//      end if;
+// end if;
+
+// if (curentHour >= 9 & <= 16) then;
+
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+
+// if currentHour >= 9 and <= 16; continue;
+//      else if (currentHour > 9) style blue;
+//        else (currentHour > 16); style red; clear storage;   nested if statement
+
+if (currentHour >= 9 <= 16){
+} else if( currentHour > 9){
+  style = blue;
+} else{ currentHour > 16
+
+}
+
+// 0-23
+
+
+// 9-16
+// continue our algorithm
+// < 9 style blue
+// > 16 style red and clear;
+
+function sunDial(){
+
+}
+
+
+
+function parseTime(){ 
+}
+
+if (currentHour >= 9 <= 16){
+  sunDial()
+} else if(true){ // 0 > 9
+  style = blue;
+}else{          // 9 < 16
+  style = red;   
+}
+
+
+
+
+
+// if currentHour >= 9 and <= 16;
+
 
 //function parseTime()
-
-
-
-
 
 // let hourCheck = [9,   10,   11,   12,  13,  14,  15,  16];
 //     array:       0     1     2     3    4    5    6    7 ;
