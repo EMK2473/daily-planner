@@ -23,7 +23,7 @@ const hourlyPlans = [
   { id: "p7", class: "plans" },
 ];
 // function #1
-// generates 8 blocks, corresponding the time and an event slot
+// generates 8 blocks, corresponding to the time and an event slot.
 function createHourlySchedule() {
   let schedule = [];
   for (let i = 0; i < nineToFive.length; i++) {
@@ -39,7 +39,7 @@ function createHourlySchedule() {
 }
 let hourlySchedule = createHourlySchedule();
 // function #2
-// assigns current hour to the hourlySchedule's index
+// assigns current hour to the hourlySchedule index.
 function assignCurrentHour(hourlySchedule, currentHour) {
   if (currentHour >= 9 && currentHour <= 16) {
     let index = currentHour - 9;
@@ -50,7 +50,7 @@ function assignCurrentHour(hourlySchedule, currentHour) {
 }
 assignCurrentHour(hourlySchedule, currentHour);
 // function #3
-// displays the hourly schedule and styles current hour, past hours, and future hours accordingly
+// displays the hourly schedule and styles current hour, past hours, and future hours accordingly.
 function displayHourlySchedule(hourlySchedule, currentHour) {
     let hourBlock = document.getElementById("hourBlock");
     for (let i = 0; i < hourlySchedule.length; i++) {
