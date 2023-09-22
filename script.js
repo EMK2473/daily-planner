@@ -1,8 +1,7 @@
 let today = dayjs();
-$("#today").text(today.format("MM/D/YYYY")); 
+$("#today").text(today.format("MM/D/YYYY"));
 $("#now").text(today.format("h:m"));
-let currentHour = dayjs().hour(); 
-console.log(today)
+let currentHour = dayjs().hour();
 const nineToFive = [
   { text: "9am", id: "b0", class: "blocks" },
   { text: "10am", id: "b1", class: "blocks" },
@@ -53,48 +52,48 @@ assignCurrentHour(hourlySchedule, currentHour);
 // function #3
 // displays the hourly schedule and styles current hour, past hours, and future hours accordingly.
 function displayHourlySchedule(hourlySchedule, currentHour) {
-    let hourBlock = document.getElementById("hourBlock");
-    for (let i = 0; i < hourlySchedule.length; i++) {
-      let sunDial = hourlySchedule[i];
-      let blockElement = document.createElement("div");
-      blockElement.className = sunDial.plan.class;
-      blockElement.textContent = sunDial.time;
-      if (sunDial.currentHour) {
-        blockElement.classList.add("current-hour");
-      } else if (i < currentHour - 9) {
-        blockElement.classList.add("before-current-hour");
-      } else {
-        blockElement.classList.add("after-current-hour");
-      }
-      hourBlock.appendChild(blockElement);
+  let hourBlock = document.getElementById("hourBlock");
+  for (let i = 0; i < hourlySchedule.length; i++) {
+    let sunDial = hourlySchedule[i];
+    let blockElement = document.createElement("div");
+    blockElement.className = sunDial.plan.class;
+    blockElement.textContent = sunDial.time;
+    if (sunDial.currentHour) {
+      blockElement.classList.add("current-hour");
+    } else if (i < currentHour - 9) {
+      blockElement.classList.add("before-current-hour");
+    } else {
+      blockElement.classList.add("after-current-hour");
     }
+    hourBlock.appendChild(blockElement);
   }
-  displayHourlySchedule(hourlySchedule, currentHour);
+}
+displayHourlySchedule(hourlySchedule, currentHour);
 // function #4
 // saves plans in hourlyPlans array, and stores data locally
-  function updatePlan(index, event) {
-    event.preventDefault();
-    let inputElement = document.getElementById(`planText${index}`);
-    let inputValue = inputElement.value;
-    let plansSection = document.getElementById(`p${index}`);
-    plansSection.textContent = inputValue;
-    localStorage.setItem(`plan${index}`, inputValue);
+function updatePlan(index, event) {
+  event.preventDefault();
+  let inputElement = document.getElementById(`planText${index}`);
+  let inputValue = inputElement.value;
+  let plansSection = document.getElementById(`p${index}`);
+  plansSection.textContent = inputValue;
+  localStorage.setItem(`plan${index}`, inputValue);
+}
+// clears all local storage at 5pm
+if (currentHour >= 17) {
+  for (let i = 0; i < hourlyPlans.length; i++) {
+    localStorage.removeItem(`plan${i}`);
   }
-  // clears all local storage at 5pm
-  if (currentHour >= 17) {
-    for (let i = 0; i < hourlyPlans.length; i++) {
-      localStorage.removeItem(`plan${i}`);
+}
+// function #5
+// loads stored data in hourlyPlans array
+function loadStoredData() {
+  for (let i = 0; i < hourlyPlans.length; i++) {
+    const storedValue = localStorage.getItem(`plan${i}`);
+    if (storedValue !== null) {
+      document.getElementById(`planText${i}`).value = storedValue;
+      document.getElementById(`p${i}`).textContent = storedValue;
     }
   }
-  // function #5
-  // loads stored data in hourlyPlans array
-  function loadStoredData() {
-    for (let i = 0; i < hourlyPlans.length; i++) {
-      const storedValue = localStorage.getItem(`plan${i}`);
-      if (storedValue !== null) {
-        document.getElementById(`planText${i}`).value = storedValue;
-        document.getElementById(`p${i}`).textContent = storedValue;
-      }
-    }
-  }
-  window.addEventListener("load", loadStoredData);
+}
+window.addEventListener("load", loadStoredData);
