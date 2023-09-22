@@ -4,7 +4,7 @@
 - This is a daily planner designed like a sundial!
 - The current hour will be green, while the past will be red, and the future will be blue.
 - You can add events to your planner by typing them into the input box and save them by pressing enter. 
-- Accessing the site after 5pm will automatically clear the events from that day, because you can't schedule things in the past!
+- Upon refreshing the page after 5pm, the events will automatically clear from the day; because you can't schedule things in the past!
 - Depending on what time you view the site, will determine what you can see and do. Just like a sundial!
 
 
