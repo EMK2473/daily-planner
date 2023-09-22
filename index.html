@@ -15,32 +15,68 @@
   </head>
   <body>
     <header>
-        <section>
-        <h1>Daily Planner</h1>
-        <p>Today's Date: 
-            <p id="today"></p>   
-        </p> 
-    </section>
+      <section>
+        <h1>SunDial Daily Planner</h1>
+        <p>Today's Date: <p id="today"></p></p>
+      </section>
     </header>
-    <section id="planList">
+    <section id="planner">
+      <section id="planList">
         <section id="hourBlock">
-
         </section>
-        <section id="planEntry">
-            <form id="planForm" method="POST">
-                <label for="plans-Text">Plans:</label>
-                <input type="text" name="initals" id="planText" />
-              </form>
+        <section class="planEntry">
+            <section id="p0" class="plans">
+                <form id="planForm0" method="POST" onsubmit="updatePlan(0, event)">
+                    <label for="plans-Text0">Plans:</label>
+                    <input type="text" name="event" id="planText0" />
+                  </form>
+              </section>
+              <section id="p1" class="plans">
+                <form id="planForm1" method="POST" onsubmit="updatePlan(1, event)">
+                    <label for="plans-Text1">Plans:</label>
+                    <input type="text" name="event" id="planText1" />
+                  </form>
+              </section>
+              <section id="p2" class="plans">
+                <form id="planForm2" method="POST" onsubmit="updatePlan(2, event)">
+                    <label for="plans-Text2">Plans:</label>
+                    <input type="text" name="event" id="planText2" />
+                  </form>
+              </section>
+              <section id="p3" class="plans">
+                <form id="planForm3" method="POST" onsubmit="updatePlan(3, event)">
+                    <label for="plans-Text3">Plans:</label>
+                    <input type="text" name="event" id="planText3" />
+                  </form>
+              </section>
+              <section id="p4" class="plans">
+                <form id="planForm4" method="POST" onsubmit="updatePlan(4, event)">
+                    <label for="plans-Text4">Plans:</label>
+                    <input type="text" name="event" id="planText4" />
+                  </form>
+              </section>
+              <section id="p5" class="plans">
+                <form id="planForm5" method="POST" onsubmit="updatePlan(5, event)">
+                    <label for="plans-Text5">Plans:</label>
+                    <input type="text" name="event" id="planText5" />
+                  </form>
+              </section>
+              <section id="p6" class="plans">
+                <form id="planForm6" method="POST" onsubmit="updatePlan(6, event)">
+                    <label for="plans-Text6">Plans:</label>
+                    <input type="text" name="event" id="planText6" />
+                  </form>
+              </section>
+              <section id="p7" class="plans">
+                <form id="planForm7" method="POST" onsubmit="updatePlan(7, event)">
+                    <label for="plans-Text7">Plans:</label>
+                    <input type="text" name="event" id="planText7" />
+                  </form>
         </section>
-        <section id="save-plans">
-
-        </section>
-        
+      </section>
+      </section>
     </section>
     <script src="path/to/dayjs/dayjs.min.js"></script>
-    <script>
-      dayjs().format()
-    </script>
     <script src="script.js"></script>
   </body>
 </html>
