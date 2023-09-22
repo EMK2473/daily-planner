@@ -5,6 +5,7 @@
     --green: #30a732;
     --blue: #2550de;
     --red: #dc1919;
+    --sun: #e2722d;
 }
 * {
     box-sizing: border-box;
@@ -31,7 +32,7 @@ header {
 #planner{
     display: flex;
     justify-content: center;
-    background-color: var(--white);
+    background-color: var(--sun);
     border: solid;
     height: 100%;
     width: 100%;
