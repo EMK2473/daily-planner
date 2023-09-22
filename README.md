@@ -13,5 +13,6 @@ Deployed Link: https://emk2473.github.io/daily-planner/
 Repo Link: https://github.com/EMK2473/daily-planner/
 
 Screenshot of Deployed Site:
-![Sundial Site](./assets/sundialScreenShot.jpg)
 
+![Sundial Site without events](/assets/SDSS2.jpg)
+![Sundial Site](./assets/SDSS1.jpg)
