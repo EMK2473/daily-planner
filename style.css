@@ -2,9 +2,9 @@
     --black: #000000;
     --white: #ffffff;
     --gray: #4c4c4c;
-    --green: #30a732;
-    --blue: #2550de;
-    --red: #dc1919;
+    --present: #77de79;
+    --future: #6988ea;
+    --past: #2c0505;
     --sun: #e2722d;
 }
 * {
@@ -77,15 +77,15 @@ header {
     font-size: 24px;
 }
 .current-hour {
-    background-color: var(--green); 
+    background-color: var(--present); 
     color: var(--white);
   }
 .before-current-hour {
-    background-color: var(--red);
+    background-color: var(--past);
     color: var(--white);
 }
 .after-current-hour {
-    background-color: var(--blue);
+    background-color: var(--future);
     color: var(--white);
 }
  
