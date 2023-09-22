@@ -1,5 +1,5 @@
 let today = dayjs();
-$("#today").text(today.format("MM D, YYYY")); 
+$("#today").text(today.format("MM/D/YYYY")); 
 let currentHour = dayjs().hour(); 
 console.log(currentHour); 
 const nineToFive = [
