@@ -8,9 +8,9 @@ At 5pm the planner will automatically clear all your plans from the day.
 Depending on what time you view the site, will determine what you can see and do. Just like a sundial!
 
 
-Deployed Link: 
+Deployed Link: https://emk2473.github.io/daily-planner/
 
-Repo Link:
+Repo Link: https://github.com/EMK2473/daily-planner/
 
 Screenshot of Deployed Site:
 ![Sundial Site](./assets/sundialScreenShot.jpg)
