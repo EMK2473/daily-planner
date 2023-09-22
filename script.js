@@ -70,7 +70,7 @@ function displayHourlySchedule(hourlySchedule, currentHour) {
   }
   displayHourlySchedule(hourlySchedule, currentHour);
   // function #4
-// saves plans and stores locally
+// saves plans in hourlyPlans array, and stores data locally
   function updatePlan(index, event) {
     event.preventDefault();
     let inputElement = document.getElementById(`planText${index}`);
@@ -79,14 +79,14 @@ function displayHourlySchedule(hourlySchedule, currentHour) {
     plansSection.textContent = inputValue;
     localStorage.setItem(`plan${index}`, inputValue);
   }
-  // clears all local storage at midnight
+  // clears all local storage at 5pm
   if (currentHour >= 17) {
     for (let i = 0; i < hourlyPlans.length; i++) {
       localStorage.removeItem(`plan${i}`);
     }
   }
   // function #5
-  // loads stored data
+  // loads stored data in hourlyPlans array
   function loadStoredData() {
     for (let i = 0; i < hourlyPlans.length; i++) {
       const storedValue = localStorage.getItem(`plan${i}`);
