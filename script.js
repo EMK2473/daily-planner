@@ -69,7 +69,7 @@ function displayHourlySchedule(hourlySchedule, currentHour) {
     }
   }
   displayHourlySchedule(hourlySchedule, currentHour);
-  // function #4
+// function #4
 // saves plans in hourlyPlans array, and stores data locally
   function updatePlan(index, event) {
     event.preventDefault();
