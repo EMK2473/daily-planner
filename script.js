@@ -1,6 +1,6 @@
 let today = dayjs();
 $("#today").text(today.format("MM/D/YYYY"));
-$("#now").text(today.format("h:m"));
+$("#now").text(today.format("h:mm"));
 let currentHour = dayjs().hour();
 const nineToFive = [
   { text: "9am", id: "b0", class: "blocks" },
