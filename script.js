@@ -11,6 +11,7 @@ const nineToFive = [
   { text: "2pm", id: "b5", class: "blocks" },
   { text: "3pm", id: "b6", class: "blocks" },
   { text: "4pm", id: "b7", class: "blocks" },
+  { text: "5pm", id: "b8", class: "blocks" },
 ];
 const hourlyPlans = [
   { id: "p0", class: "plans" },
@@ -21,9 +22,9 @@ const hourlyPlans = [
   { id: "p5", class: "plans" },
   { id: "p6", class: "plans" },
   { id: "p7", class: "plans" },
+  { id: "p8", class: "plans" },
 ];
-// function #1
-// generates 8 blocks, corresponding to the time and an event slot.
+// function #1 generates 9 blocks, corresponding to the time and an event slot.
 function createHourlySchedule() {
   let schedule = [];
   for (let i = 0; i < nineToFive.length; i++) {
@@ -38,8 +39,7 @@ function createHourlySchedule() {
   return schedule;
 }
 let hourlySchedule = createHourlySchedule();
-// function #2
-// assigns current hour to the hourlySchedule index.
+// function #2 assigns current hour to the hourlySchedule index.
 function assignCurrentHour(hourlySchedule, currentHour) {
   if (currentHour >= 9 && currentHour <= 16) {
     let index = currentHour - 9;
@@ -49,8 +49,7 @@ function assignCurrentHour(hourlySchedule, currentHour) {
   }
 }
 assignCurrentHour(hourlySchedule, currentHour);
-// function #3
-// displays the hourly schedule and styles current hour, past hours, and future hours accordingly.
+// function #3 displays the hourly schedule and styles current hour, past hours, and future hours accordingly.
 function displayHourlySchedule(hourlySchedule, currentHour) {
   let hourBlock = document.getElementById("hourBlock");
   for (let i = 0; i < hourlySchedule.length; i++) {
@@ -69,8 +68,7 @@ function displayHourlySchedule(hourlySchedule, currentHour) {
   }
 }
 displayHourlySchedule(hourlySchedule, currentHour);
-// function #4
-// saves plans in hourlyPlans array, and stores data locally
+// function #4 saves plans in hourlyPlans array, and stores data locally
 function updatePlan(index, event) {
   event.preventDefault();
   let inputElement = document.getElementById(`planText${index}`);
@@ -85,8 +83,7 @@ if (currentHour >= 17) {
     localStorage.removeItem(`plan${i}`);
   }
 }
-// function #5
-// loads stored data in hourlyPlans array
+// function #5 loads stored data in hourlyPlans array
 function loadStoredData() {
   for (let i = 0; i < hourlyPlans.length; i++) {
     const storedValue = localStorage.getItem(`plan${i}`);
